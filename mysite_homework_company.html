@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<html lang=ru>
+	<head>
+		<meta charset="utf-8" />
+		<title>Сайт на HTML5 от MSQRD.BY</title>
+		<!--[if IE]>
+			<script>
+				document.createElement('header');
+				document.createElement('nav');
+				document.createElement('section');
+				document.createElement('article');
+				document.createElement('aside');
+				document.createElement('footer');
+			</script>
+		<![endif]-->
+		<style>
+/* обнуляем все элементы */
+			* 
+				{
+				margin:0;
+				padding:0;
+				outline:none;
+				}  
+				
+/* --- Общие стили --- */ 
+			
+			html 
+				{
+				font-size:75%;
+				height:100%;
+				} 
+			body 
+				{
+				font:normal 1em/1.3 arial, helvetica, sans-serif;
+				color:#333;height:100%;
+				background:#f0f0f0;
+				} 
+			a 
+				{
+				color:#2b82dc;
+				}
+			aside:hover a, footer:hover a, p:hover a 
+				{
+				color:#0E6994;
+				} 
+			a:hover 
+				{
+				text-decoration:none;
+				color:#0E6994;
+				} 
+			abbr 
+				{
+				border-bottom:1px dotted #2b82dc;
+				cursor:help;
+				}
+        ul h3{
+      font-weight: bolder;
+    } 
+			h1, h2, h3, h4, h5, h6 
+									{
+									font-weight:normal;
+									line-height:1;
+									margin:4px 0 12px;
+									padding:4px;
+									color:#2ca9e4;
+									} 
+			h1 
+				{
+				font-size:1.88em;
+        color: rgb(20, 20, 72);
+				} 
+			h2 + a 
+					{
+					margin-bottom:10px;
+					}
+			li 
+				{
+				margin-bottom:10px;
+        padding-right: 30px;
+				}
+			p 
+				{
+        text-indent: 30px;
+				text-align:justify;
+				word-spacing:.1ex;
+				line-height:1.6;
+				padding-left:4px;
+				margin-bottom:1em;
+				} 
+			ul 
+				{
+				list-style:none;
+				}
+      #ul_list 
+				{
+          padding-left: 20px;
+				list-style:square;
+				}  
+			ol 
+				{
+				list-style-position:inside;
+				}
+			.video 
+					{
+					 margin: 0 auto; 
+					 text-align: center;
+					}
+			summary 
+					{
+					margin-left:1em;
+					font-weight:bold;
+					color: #2ca9e4;
+					}
+			form 
+				{
+				margin:1em;
+				padding:.5em;
+				}
+			input[id=contact_name]
+								{
+                width: 290px;
+								padding-left:5px;
+								margin-left:53px;
+								}
+								
+			input[id=contact_email]
+								{
+                width: 290px;
+								padding-left:5px;
+								margin-left:43px;
+								}
+			input[id=contact_phone]
+								{
+                width: 290px;  
+								padding-left:5px;
+								margin-left:27px;
+								}
+      input[id=contact_date]
+								{
+                width: 290px;  
+								padding-left:5px;
+								margin-left:27px;
+								}
+      input[id=callback]
+								{
+                width: 290px;  
+								padding-left:5px;
+								margin-left:0px;
+								}
+			input[type=submit] 
+								{
+								border-radius:10px;
+								color: #2ca9e4;
+								padding:0.5em;
+								margin-left:2em;
+								}
+      
+			/* делаем семантические тэги - блочными */ 	
+			header, nav, section, article, aside, footer 
+														{
+														display:block;
+														position:relative;
+														} 
+														
+			/* выравниваем страницу по центру, делаем отступы и цвет фона */ 			
+			#main 
+				{
+				width:950px;
+				min-height:100%;
+				padding:0 24px;
+				margin:0 auto;
+				background:#fff;
+				} 
+				
+			/* пишем класс для шапки - header */ 			
+			.h 
+				{
+				overflow:hidden;
+				height:100px;
+				padding:0px 25px 0;
+        padding-left: 0px;
+        text-align: center;
+        background-color: rgb(136, 186, 223);
+        
+				} 
+				
+			/* меню навигации */ 
+      .navigation{
+        display: none;
+      }
+			nav 
+				{
+				width:948px;
+				height:42px;
+				background:#2ca9e4;
+        border-style: solid;
+        border-width: 1px;
+				/* border-radius:20px;*/
+				} 
+			nav li 
+					{
+					float:left;
+          margin: auto;
+          
+           padding-right: 0px;
+					margin:15px 20px 2px;
+					} 
+       nav ul 
+					{
+          margin: auto;
+					
+          margin-left: 30px;
+         
+					} 
+			nav a 
+					{
+					font-weight:bold;
+					text-decoration:none;
+					color:#fff;
+					} 
+			nav a:hover 
+						{
+						text-decoration:underline;
+						color:#fff;
+						} 
+			
+			/* область основного контента */ 
+			section 
+					{
+					overflow:hidden;
+					}
+					
+			/* стиль для картинки */ 
+			.image 
+					{
+					
+					margin:0px 0;
+          padding-left: 0px;
+          float: left;
+          display: block;
+					}
+        
+			figure {
+					padding: 10px; /* Поля вокруг */
+					display: block; /* Блочный элемент */
+					width: 550px; /* Ширина */
+					margin: 0 10px 10px 0; /* Отступы */
+					text-align: center; /* Выравнивание по центру */
+				   }
+			figcaption {
+						color: #2ca9e4; /* Цвет текста */
+						font-size:1.2em;
+					   }		
+			 mark {
+					background: #ffec82;
+					padding: 1px 3px;
+					border: 1px dashed #333;
+				   }
+			/* внутренняя область контента */ 
+			
+							
+			/* правая часть */
+      .h3aside{
+        display: none;
+      } 
+			aside 
+				{
+				overflow:hidden;
+				width:888px;
+        height: 40px;
+				padding:0 30px;
+         border-style: solid;
+         border-width: 1px;
+				}
+
+        aside ul
+       {
+        
+        
+				}
+        
+       aside li
+       {
+         text-align: center;
+         width: 200px;
+         padding-right: 22px;
+         margin-top: 0;
+         padding-top: 0;
+         float: left;
+        
+				}
+        aside h2
+       {
+         margin-top: 20px;
+         text-indent: 20px;
+				}
+
+        #aside1
+        {
+          float: left;
+          width: 500px;
+          height: 400px;
+        } 
+
+        .tooltip {
+    position: relative;
+    display: inline;
+    border-bottom: 1px dotted black;
+    cursor: help;
+    
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 170px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 100;
+    bottom: 100%;
+    left: 50%;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext2 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip .tooltiptext2 {
+    visibility: hidden;
+    width: 170px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 100;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -140px;
+    margin-bottom: -80px;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+				
+			/* нижняя часть - footer */ 
+			footer 
+					{
+            text-align: center;
+					height:40px;
+					padding:25px 25px 240px;
+					margin:20px 0 0px;
+					border-top:1px solid #0E6994;
+					} 
+					
+			/* стили для выделения областей HTML */ 
+			.tag 
+				{
+				position:absolute;
+				right:6px;top:2px;
+				font-size:11px;
+				font-style:normal;
+				} 
+			header:hover, nav:hover, section:hover, article:hover, aside:hover, footer:hover 
+																							{
+																							background:#FFC327;
+																							color:#fff;
+																							} 
+			section section:hover, section aside:hover 
+														{
+														background:#FFD25D;
+														} 
+			section article:hover 
+									{
+									background:#FFC327;
+									} 
+			article header:hover 
+									{
+									background:#FFD25D;
+									color:#777;
+									} 
+			section article .tag 
+								{
+								top:12px;
+								} 
+			article header .tag 
+								{
+								right:70px;
+								top:2px;
+								} 
+			aside .tag 
+						{
+						top:12px;
+						}
+      .comment{
+        background-color: rgb(208, 208, 245);
+        width: 600px;
+        border-style: solid;
+        border-radius: 15px;
+        border-width: 1px;
+      }
+      .comment_text{
+        font-style: italic;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: rgb(53, 53, 124);
+      }
+      .bg{
+        background-image: url(images/bg.jpg);
+      }
+		</style>
+	</head>
+	<body>
+		<div id="main"> <!-- Главный блок всей страницы (обертка) -->
+			
+			<!-- Тэг header  -->
+      
+      
+      
+			<header class="h">
+        <img class="image" src="images/7.jpg" height="100" width="320" alt="logo" />
+        <!-- <i class="tag">&lt;section&gt;</i> -->
+        
+        
+				<h1>Сайт на HTML5 от информационного ресурса <br><br>"Golden Fish Vision.BY"</h1>
+        <!-- <i class="tag">&lt;header&gt;</i> -->
+       
+			</header>
+			
+			<!-- Тэг nav -->
+      
+			<nav>
+        <h5 class="navigation">Меню навигации</h5>
+				<ul>
+					<li><a href="mysite_homework_company.html">О компании</a></li>
+          <li><a href="mysite_homework_service.html">Услуги</a></li>
+          <li><a href="mysite_homework_portfolio.html">Портфолио</a></li>
+          <li><a href="mysite_homework_news.html">Новости</a></li>
+          <li><a href="mysite_homework_contacts.html">Контакты</a></li>		
+				</ul>
+        <!-- <i class="tag">&lt;nav&gt;</i> -->
+			</nav>
+      
+
+      <aside>
+        
+          <h2 class ="h3aside">Предложения</h2>
+        <ul>
+          <li><h3><a href="/service/website/">Создание и разработка сайтов</a></h3>
+          
+          <li>
+            <h3><a href="/service/design/">Веб-дизайн</a></h3>
+            
+          </li>
+          <li>
+            <h3><a href="/service/markup/">HTML верстка сайтов</a></h3>
+            
+          </li>
+          <li>
+            <h3><a href="/service/markup/">Наполнение контентом HTML сайтов</a></h3>
+            
+          </li>
+        </ul>
+          
+          
+       </aside>
+        
+      
+			
+			<!-- Тэг section для вставки изображения логотипа -->
+			
+			<!-- Блок всего контента страницы -->
+			
+        
+			
+				<!-- Блок левой части контента страницы -->
+				<section class="bg">
+          <h2>Информационный ресурс "Golden Fish Vision".BY</h2>
+				
+					<!-- Первая статья контента-->
+					
+						<header>
+							<h2>О компании</h2>
+              <!-- <i class="tag">&lt;header&gt;</i>-->
+						</header>
+						<p>Наша компания оказывает целый ряд различных <a href="mysite_homework_service.html">услуг</a> от создания сайтов до газификации частных домов и коттеджей, выполняя работы по проведению газопроводов-вводов и
+            внутридомовых газопроводов «под ключ» с 2012 года. Более 900 домовладельцев получили возможность обрести тепло и уют в
+            своем доме.
+            
+            Безусловно, мы также давно и успешно сотрудничаем с заказчиками — юридическими лицами. ТОЙОТА ЦЕНТР в Минске, больницы,
+            предприятие Спецнефтеуслуга, ЗАО «Автопривал» и многие другие организации воспользовались нашими услугами и оставили
+            положительные отзывы о сотрудничестве.</p>
+              <h2>В сферу нашей деятельности входят:</h2>
+            <ul id="ul_list">
+              <li>Проектные работы</li>
+              <li>Выполнение топографической съемки местности</li>
+              <li>Получение разрешения на земляные работы, ордера на раскопки</li>
+              <li>Регистрация объекта в газоснабжающей организации</li>
+              <li>Монтаж газопровода-ввода с земляными работами</li>
+              <li>Монтаж внутридомового газопровода</li>
+              <li>Оформление исполнительной документации</li>
+              <li>Сдача объекта газоснабжающей организации</li>
+            </ul>
+            <section>
+                <h2>Отзывы клиентов:</h2>
+            <article class="comment">
+              <h3>Анна Рудольфштадт</h3>
+              <p>★★★★★ (5 звёзд из 5)</p>
+              <p>Ревизор</p>
+              <p class="comment_text">
+                Уже отчаялась. Планы горят, а ничего не сделано. Работники настоящие профессионалы, всё сделали быстро и качественно. Всем советую обращаться именно в Gold Fish Vision.
+              </p>
+              
+              <p>— Добавлено 23 Марта, 2019</p>
+            </article><br>
+
+            <article class="comment">
+            <h3>Толик Дакотов</h3>
+            <p>★★★★★ (5 звёзд из 5)</p>
+            <p>Машинист</p>
+            <p class="comment_text">
+              Всё сделано в срок. Отличная работа. Буду советвать всем именно вас. 
+            </p>
+            <p>— Добавлено 22 Июня, 2020</p>
+            </article>
+            
+            </section>
+            </section>
+
+          
+
+			<footer>
+        Контактный телефон: +375 44 777-77-77<br>
+        Наш Е-mail: <a href="mailto:gfv@gmail.com">gfv@gmail.com</a><br>
+        Наша группа в <a href="https://telegram.im" target="_blank">Telegram</a>
+        <br><br>
+				Copyright &copy; 2021 <a href="/" rel="copyright">Golden Fish Vision Belarus</a>. All rights reserved.
+        
+			<!--	<i class="tag">&lt;footer&gt;</i>-->
+        
+			</footer>
+		</div> <!-- Границы главного блока (обертки) страницы -->
+	</body>
+</html>
+
